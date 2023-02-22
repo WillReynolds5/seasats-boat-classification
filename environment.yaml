@@ -25,6 +25,7 @@ dependencies:
   - pip:
       - contourpy==1.0.7
       - cycler==0.11.0
+      - einops==0.6.0
       - fonttools==4.38.0
       - importlib-resources==5.12.0
       - kiwisolver==1.4.4
@@ -39,5 +40,6 @@ dependencies:
       - torchaudio==0.10.0+rocm4.1
       - torchvision==0.11.0+cu111
       - typing-extensions==4.5.0
+      - vit-pytorch==1.0.2
       - zipp==3.14.0
 prefix: /home/mclean/miniconda3/envs/shipclassifier
