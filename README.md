@@ -43,7 +43,7 @@
 <p>-- lr: The learning rate for the optimizer. (default: 1e-4)</p>
 
 <h3>The model learned what a boat is after 10 epochs!</h3>
-![Alt text](https://github.com/WillReynolds5/seasats-image-classification/blob/main/losses.png?raw=true "Is it a boat?")
+![Alt text](https://github.com/WillReynolds5/seasats-image-classification/blob/main/losses.png?raw=true")
 
 <h2>Evaluation</h2>
 <p>To evaluate the trained model on a new image, you can use the evaluate.py script. Eval has been built with a command line interface so the project can be interfaced as a subprocess from another programming language (what ever you guys are using for hardware, C++?). The script takes the following arguments:</p>
