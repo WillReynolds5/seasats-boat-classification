@@ -4,7 +4,7 @@
 <h2>Installation and Project Setup</h2>
 <p>To set up the project, first clone the repository:</p>
 
-<code>git clone https://github.com/WillReynolds5/seasats-image-classification.git </code>
+<code>git clone https://github.com/WillReynolds5/seasats-boat-classification.git </code>
 <p>Next, create a new conda environment from the provided environment.yml file:</p>
 
 <code>conda env create -f environment.yaml</code>
