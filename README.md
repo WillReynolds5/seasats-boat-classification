@@ -19,8 +19,8 @@
 
 <p>Images are expected to be in the following directory structure:</p>
 <ul>
-<li> 70% of the images at /dataset/train</li>
-<li> 30% of the images at /dataset/val</li>
+<li> 70% of the images at /dataset/train, with boat and not boat images in separate folders</li>
+<li> 30% of the images at /dataset/val, with boat and not boat images in separate folders</li>
 </ul>
 
 
@@ -51,9 +51,10 @@
 </ul>
 <p>For example, to evaluate the model on an image file named boat.jpg, you could run:</p>
 <code>python evaluate.py boat.jpg</code>
-
+<br>
 <p>The script will preprocess the image using the preprocess_data function, run it through the pre-trained model, and output the model's prediction for the image ("boat" or "not boat"). The default path for the model file is model.pt, but you can specify a different path using the --model_path argument:</p>
 <code>python evaluate.py boat.jpg --model_path my_model.pth</code>
+<br>
 <p>TODO: do not randomly crop images for EVAL</p>
 
 <h2>TODO</h2>
