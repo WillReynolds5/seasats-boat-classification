@@ -64,7 +64,7 @@ def train_model(train_loader, val_loader, model, epochs=10, lr=1e-4):
 
     return model, train_losses
 
-# TODO: add hyperparameter tuning and save best model
+# TODO: add hyperparameter tuning and save best modell
 
 if __name__ == "__main__":
 
