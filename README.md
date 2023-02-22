@@ -7,7 +7,7 @@
 <code>git clone https://github.com/WillReynolds5/seasats-image-classification.git </code>
 <p>Next, create a new conda environment from the provided environment.yml file:</p>
 
-<code>conda env create -f environment.yml</code>
+<code>conda env create -f environment.yaml</code>
 <p>Activate the environment:</p>
 
 <code>conda activate shipclassifier</code>
