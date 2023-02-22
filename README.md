@@ -15,6 +15,8 @@
 
 <h2>Prepare Dataset</h2>
 <p>This code crops and resizes images to size=256px, input images can be of any aspect ratio / size</p>
+<p>TODO: This should be optimized to what ever aspect ratio and resolution the Seastats camera will have</p>
+
 <p>Images are expected to be in the following directory structure:</p>
 <ul>
 <li> 70% of the images at /dataset/train</li>
@@ -41,6 +43,20 @@
 <p>-- lr: The learning rate for the optimizer. (default: 1e-4)</p>
 
 
+<h2>Evaluation</h2>
+<p>To evaluate the trained model on a new image, you can use the evaluate.py script. Eval has been built with a command line interface so the project can be interfaced as a subprocess from another programming language (what ever you guys are using for hardware, C++?). The script takes the following arguments:</p>
+<ul>
+<li>--image_path: The path to the image file to evaluate.</li>
+<li>--model_path: The path to the saved model file. (default: "checkpoints/model.pth")</li>
+</ul>
+<p>For example, to evaluate the model on an image file named boat.jpg, you could run:</p>
+<code>python evaluate.py boat.jpg</code>
+
+<p>The script will preprocess the image using the preprocess_data function, run it through the pre-trained model, and output the model's prediction for the image ("boat" or "not boat"). The default path for the model file is model.pt, but you can specify a different path using the --model_path argument:</p>
+<code>python evaluate.py boat.jpg --model_path my_model.pth</code>
+<p>TODO: do not randomly crop images for EVAL</p>
+
 <h2>TODO</h2>
+<p>make the model work on non square images</p>
 <p>Optimize the preprocessing for the seasats dataset</p>
 <p>ViT is optimzied to run on GPU, a different model may be more well suited for the seasats hardware (CNN/RESNET)</p>
