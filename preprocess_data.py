@@ -13,9 +13,15 @@ def preprocess_data(data):
     Returns:
         The preprocessed data.
     """
+    if data.height < 256:
+        w, h = data.size
+        new_w = int(w * (256 / h))
+        data = data.resize((new_w, 256))
+    else:
+        data = data.resize((256, 256))
+
     transform = transforms.Compose([
         transforms.RandomCrop(256), # TODO: POSSIBLY CHANGE/REMOVE THIS ONCE SEEING DATASET, RANDOM CROP OR CENTER CROP COULD REMOVE SMALL SHIPS IN BACKGROUND FROM THE IMAGE
-        transforms.Resize((256, 256)),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) # TODO: SET THESE VALUES TO THE MEAN AND STD OF THE SHIPS DATASET, CURRENTLY SET TO IMAGENET VALUES
     ])

@@ -60,7 +60,7 @@ def train_model(train_loader, val_loader, model, epochs=10, lr=1e-4):
     plt.ylabel('Loss')
     plt.title('Training and Validation Losses')
     plt.legend()
-    plt.show()
+    plt.savefig('losses.png')
 
     return model, train_losses
 
