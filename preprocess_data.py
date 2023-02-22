@@ -17,8 +17,6 @@ def preprocess_data(data):
         w, h = data.size
         new_w = int(w * (256 / h))
         data = data.resize((new_w, 256))
-    else:
-        data = data.resize((256, 256))
 
     transform = transforms.Compose([
         transforms.RandomCrop(256), # TODO: POSSIBLY CHANGE/REMOVE THIS ONCE SEEING DATASET, RANDOM CROP OR CENTER CROP COULD REMOVE SMALL SHIPS IN BACKGROUND FROM THE IMAGE
