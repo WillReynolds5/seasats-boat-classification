@@ -46,7 +46,7 @@
 <h2>Evaluation</h2>
 <p>To evaluate the trained model on a new image, you can use the evaluate.py script. Eval has been built with a command line interface so the project can be interfaced as a subprocess from another programming language (what ever you guys are using for hardware, C++?). The script takes the following arguments:</p>
 <ul>
-<li>--image_path: The path to the image file to evaluate.</li>
+<li>image_path: The path to the image file to evaluate.</li>
 <li>--model_path: The path to the saved model file. (default: "checkpoints/model.pth")</li>
 </ul>
 <p>For example, to evaluate the model on an image file named boat.jpg, you could run:</p>

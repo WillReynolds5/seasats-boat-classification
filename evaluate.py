@@ -29,6 +29,7 @@ def evaluate(model, image_path):
 
 
 if __name__ == "__main__":
+
     parser = argparse.ArgumentParser(description="Evaluate a ship image classification model.")
     parser.add_argument("image_path", type=str, help="Path to image to evaluate.")
     parser.add_argument("--model_path", type=str, default="model.pt", help="Path to saved model file.")
